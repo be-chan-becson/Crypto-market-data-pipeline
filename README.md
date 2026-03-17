@@ -1,32 +1,68 @@
 # Crypto Market Data Pipeline & Analysis
 
-## Project Overview
+This project demonstrates a simple end-to-end data workflow using live cryptocurrency market data from the CoinGecko API.
 
-This project collects live cryptocurrency market data from the CoinGecko API and performs exploratory data analysis (EDA) to understand market structure, volatility, and trading activity.
-
-The goal of this project is to demonstrate a simple real-world data workflow including:
-
-- API-based data collection
-- Data storage and preparation
-- Exploratory data analysis
-- Visualization
-- Basic feature engineering
+The goal of this project is to explore cryptocurrency market structure using Python and basic data analysis techniques.
 
 ---
 
-## Dataset Source
+## Project Workflow
 
-Cryptocurrency market data is collected from the CoinGecko API.
+The notebook follows a typical data science workflow:
 
-The dataset includes information such as:
+1. **Data Collection**
+   - Retrieve cryptocurrency market data from the CoinGecko API.
 
-- coin name and symbol
-- current price
-- market capitalization
-- trading volume
-- 24-hour price change
-- all-time high / all-time low
+2. **Data Preparation**
+   - Convert API responses into a structured pandas DataFrame.
+   - Select relevant market features.
+
+3. **Exploratory Data Analysis (EDA)**
+   - Market capitalization ranking
+   - Price change distribution
+   - Volume comparison
+
+4. **Visualization**
+   - Distribution of 24h price changes
+   - Market cap vs price relationship (log scale)
+
+5. **Feature Engineering**
+   - Identify highly volatile cryptocurrencies based on 24h price change.
 
 ---
 
-## Project Structure
+## Tools & Libraries
+
+Python libraries used:
+
+- pandas
+- numpy
+- matplotlib
+- requests
+
+---
+
+## Key Insights
+
+- Cryptocurrency market capitalization is dominated by a small number of large assets.
+- Smaller coins tend to show higher short-term price volatility.
+- Trading volume is concentrated among top market-cap cryptocurrencies.
+- Log-scale visualization is useful for comparing assets with large differences in market size.
+
+---
+
+## Repository Structure
+
+---
+
+## Data Source
+
+CoinGecko Public API
+
+https://www.coingecko.com/en/api
+
+---
+
+## Author
+
+Becson
